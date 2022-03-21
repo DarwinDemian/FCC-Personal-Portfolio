@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.6em;
+  background-color: #FCA311;
+}
+
+* {
+  color: #FFFFFF;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+header #navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #FCA311;
+}
+
+header #navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 2.4rem;
+  margin-top: .2rem;
+  margin-bottom: .4rem;
+}
+
+header #navbar ul li {
+  list-style: none;
+}
+
+header #navbar ul li a {
+  padding: 1rem;
+  text-decoration: none;
+}
+
+header #navbar ul li a:hover {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  grid: "welcome"  "work"  "contact";
+}
+
+main #welcome-section, main #contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #welcome-section {
+  grid-area: welcome;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  line-height: 0;
+  background: #FCA311;
+}
+
+main #welcome-section h1 {
+  font-size: 3rem;
+}
+
+main #welcome-section h2 {
+  margin-top: .3rem;
+  margin-bottom: 8rem;
+}
+
+main #projects {
+  grid-area: work;
+  background: #14213D;
+  text-align: center;
+  padding: .5rem 1.5rem;
+}
+
+main #projects h2 {
+  padding: .6rem;
+  margin: .5rem .4rem;
+  color: #14213D;
+  background: #FFFFFF;
+}
+
+main #projects .projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+main #projects .projects .project {
+  -webkit-box-flex: 45%;
+      -ms-flex: 45%;
+          flex: 45%;
+  padding: .5rem;
+}
+
+main #projects .projects .project a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: .5rem;
+  background: #FFFFFF;
+  color: #14213D;
+  text-decoration: none;
+}
+
+main #projects .projects .project a:hover {
+  color: #CA6702;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+main #projects .projects .project a:hover::before {
+  content: '<  ';
+}
+
+main #projects .projects .project a:hover::after {
+  content: '  />';
+}
+
+main #projects .projects .project .codepen {
+  height: 550px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid;
+  margin: 1em 0;
+  padding: 1em;
+}
+
+main #projects p {
+  max-width: 13rem;
+  padding: .4rem;
+  margin: .5rem auto;
+  background: #E5E5E5;
+  color: #14213D;
+}
+
+main #projects p:hover {
+  color: #CA6702;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+
+main #contact {
+  grid-area: contact;
+  background: #000000;
+  text-align: center;
+  line-height: .5rem;
+  padding: 2vh 1rem;
+  margin: .45rem 0;
+}
+
+main #contact * {
+  color: #E5E5E5;
+}
+
+main #contact .contact-details h2 {
+  font-size: 2.6rem;
+  position: relative;
+  top: 1.55rem;
+  right: 5rem;
+  display: inline;
+}
+
+main #contact .contact-details small {
+  margin-top: 0rem;
+  position: relative;
+  right: 3rem;
+}
+
+main #contact .links {
+  margin-left: 16.5rem;
+}
+
+main #contact .links .link {
+  display: inline;
+  padding: .5rem;
+}
+
+main #contact .links .link:hover {
+  cursor: pointer;
+}
+
+main #contact .links .link:hover svg, main #contact .links .link:hover a {
+  fill: #CA6702;
+  color: #CA6702;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+main #contact .links .link svg {
+  margin-top: 1.3rem;
+  height: 1.5rem;
+  fill: white;
+}
+
+main #contact .links .link a {
+  display: inline;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 833px) {
+  main #projects .projects .project {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+  main #contact .contact-details h2 {
+    font-size: 2.3rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

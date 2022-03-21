@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+// Color Pallete 
+$black: #000000;
+$darker-blue: #14213D;
+$yellow: #FCA311;
+$mustard-yellow: #CA6702;
+$silver: #E5E5E5;
+$white: #FFFFFF;
+
+$font: 'Oswald', sans-serif;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  font-family: $font;
+  font-size: 1.6em;
+  background-color: $yellow;
+}
+
+* {
+  color: $white;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  
+  #navbar {  
+    display: flex;
+    justify-content: space-around;
+    
+    background-color: $yellow;
+    
+    ul {
+      display: flex; 
+      margin-right: 2.4rem;
+      margin-top: .2rem;
+      margin-bottom: .4rem;
+      
+      li {
+        list-style: none;
+        
+        a {
+          padding: 1rem;
+          text-decoration: none;
+          
+          &:hover {
+            filter: invert(1);
+            transition: .3s;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: grid;   
+  grid: 
+    "welcome" 
+    "work" 
+    "contact";
+  
+  #welcome-section, #contact {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #welcome-section {
+    grid-area: welcome;
+    height: 100vh;
+    width: 100%; 
+    
+    color: white;
+    line-height: 0;
+    background: $yellow;
+    
+    
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      margin-top: .3rem;
+      margin-bottom: 8rem;
+    }
+  }
+  
+  #projects {
+    grid-area: work;
+    background: $darker-blue;
+    
+    text-align: center;
+    padding: .5rem 1.5rem;
+    
+    h2 {
+      padding: .6rem;
+      margin: .5rem .4rem;
+      
+      color: $darker-blue;
+      background: $white;
+    }
+    
+    .projects {
+        display: flex;
+        flex-flow: row wrap;
+      
+      .project {
+        flex: 45%;
+        padding: .5rem;
+      
+        a {
+          display: flex;
+          justify-content: center;
+        
+          padding: .5rem;
+        
+          background: $white;
+          color: $darker-blue;
+          text-decoration: none;
+        
+          &:hover {
+            color: $mustard-yellow;
+            transition: 0.2s ease-out;
+              
+            &::before {
+              content: '<  ';
+            }
+            &::after {
+              content: '  />';
+            }
+          }
+        }
+      
+        .codepen {
+          height: 550px; 
+          box-sizing: border-box; 
+        
+          display: flex; 
+          align-items: center; 
+          justify-content: center; 
+        
+          border: 2px solid; 
+          margin: 1em 0; 
+          padding: 1em;
+        }
+      }   
+    }
+     
+    p {
+      max-width: 13rem;
+      padding: .4rem;
+      
+      margin: .5rem auto;
+      background: $silver;
+      color: $darker-blue;
+      
+      &:hover {
+        color: $mustard-yellow;
+        transition: 0.2s ease-out;
+        cursor: pointer;  
+      }
+    } 
+  }
+  
+  #contact {
+    grid-area: contact;
+        
+    background: $black;
+    text-align: center;
+    line-height: .5rem;
+    padding: 2vh 1rem;
+    margin: .45rem 0;
+    
+    * {
+      color: $silver;
+    }
+    
+    .contact-details {
+      h2 {
+        font-size: 2.6rem;
+        position: relative;
+        top: 1.55rem;
+        right: 5rem;
+        display: inline;
+      }
+      small {
+        margin-top: 0rem;
+        position: relative;
+        right: 3rem;
+      }
+    }
+    
+    .links {   
+      margin-left: 16.5rem;
+      
+      .link {
+        display: inline;
+        padding: .5rem;
+        
+        &:hover {            
+          cursor: pointer;
+          
+          svg, a {
+            fill: $mustard-yellow;
+            color: $mustard-yellow;
+            transition: 0.3s;
+          } 
+        }   
+        
+        svg {
+          margin-top: 1.3rem;  
+          height: 1.5rem;
+          fill: white;        
+        }
+      
+        a {
+          display: inline;
+          font-size: 1.3rem;
+          text-decoration: none;
+        }  
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 833px) {
+  main {
+    #projects {
+      .projects {
+        .project {
+          flex: 100%;
+        }
+      }
+    }
+    
+    #contact {
+      .contact-details {
+        h2 { font-size: 2.3rem; }
+      }
+    }
+  }
+}
