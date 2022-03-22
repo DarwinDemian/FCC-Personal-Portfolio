@@ -3,10 +3,10 @@ Project made for the freeCodeCamp Responsive Web Design course with HTML and SAS
 
 ## Screenshots
 #### Desktop:
-![screenshot](https://github.com/DarwinDemian/FCC-Personal-Portfolio/blob/59106520788fbde51c1bb314c4086a653c010ab5/desktop.png)
+![screenshot](https://github.com/DarwinDemian/FCC-Aphex-Twin-Inspired-Landing-Page/blob/ad17f69effb0f2434264704de8ca67b3eaaa2c65/FCC-Aphex-Twin-Screenshot.png)
 
 #### Mobile:
-![screenshot](https://github.com/DarwinDemian/FCC-Personal-Portfolio/blob/59106520788fbde51c1bb314c4086a653c010ab5/mobile.png)
+![screenshot](https://github.com/DarwinDemian/FCC-Aphex-Twin-Inspired-Landing-Page/blob/0f91af035f107aa0e58c77e9f6061f38a071cd6f/FCC-Aphex-Twin-Mobile.png)
 
 ## Live Website
 See the project in action on Codepen:
